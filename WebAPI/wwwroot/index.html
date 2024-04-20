@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Web API</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h2>Список пользователей</h2>
+    <div>
+        <input type="hidden" id="userId" />
+        <p>
+            Имя:<br />
+            <input id="userName" />
+        </p>
+        <p>
+            Возвраст:<br />
+            <input id="userAge" type="number" />
+        </p>
+        <p>
+            <button id="saveBtn">Сохранить</button>
+            <button id="resetBtn">Сбросить</button>
+        </p>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr><th>Имя</th><th>Возвраст</th><th></th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
