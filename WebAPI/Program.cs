@@ -1,5 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using WebAPI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,7 +36,7 @@ app.MapPost("/api/users", async (User user, ApplicationContext db) =>
 {
     await db.Users.AddAsync(user);
     await db.SaveChangesAsync();
-    return user;
+    return Results.Json(user);
 });
 
 app.MapPut("/api/users", async (User userData, ApplicationContext db) =>
